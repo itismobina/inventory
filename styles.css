@@ -1,0 +1,66 @@
+:root {
+    --primary: #2A272A;
+    --gray70 : #6A686A;
+    --primaryLight : #F8F8F8;
+    --error : #FF4844;
+    --success : #35A435;
+    --info : #1C8AAE;
+    --warning : #FF8D00;
+}
+
+html, body, #root {
+    height: 100%;
+    direction: rtl;
+}
+
+@font-face {
+    font-family: "myFont";
+    src: url("/font/KalamehFaNum-Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: myFont, serif;
+    scroll-behavior: smooth;
+    direction: rtl;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+svg {
+    transition: all .3s ease;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--primary);
+    color: white;
+}
+
+.index-main-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:992px) {
+    .index-main-content, .navbar {
+        display: none;
+    }
+}

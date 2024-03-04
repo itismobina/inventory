@@ -1,0 +1,110 @@
+.right-panel {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--primary);
+    color: white;
+    padding: 20px;
+}
+
+.hidden-div {
+    width: 300px;
+}
+
+.panel-tabs {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    color: white;
+    margin-top: 25px;
+}
+
+.panel-tab {
+    width: 100%;
+    height: 284px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10px;
+    transition: .3s all ease;
+}
+
+#product-tab.hide {
+    height: 50px;
+}
+
+#product-tab.hide .panel-tab-left-icon > svg {
+    transform: rotate(90deg);
+}
+
+#store-tab.hide {
+    height: 50px;
+}
+
+#store-tab.show .panel-tab-left-icon > svg {
+    transform: rotate(90deg);
+}
+
+.panel-tab-title {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.panel-tab-label {
+    margin-right: 10px;
+}
+
+.sub-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.sub-menu-item {
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+}
+
+.sub-menu-item.selected {
+    background-color: white;
+    color: var(--primary);
+    border-radius: 10px;
+}
+
+.sub-menu-item-label {
+    margin-right: 5px;
+}
+
+.panel-tab-left-icon {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+@media screen and (max-width:1024px) {
+    .right-panel {
+        display: none;
+    }
+    .hidden-div {
+        display: none;
+    }
+}
