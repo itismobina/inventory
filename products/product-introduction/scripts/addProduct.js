@@ -14,8 +14,20 @@ export default function addProduct() {
     const modal = document.querySelector("#product-add-modal");
 
     const products = Storage.get("products") || [];
+    const reportProducts = Storage.get("report-products") || [];
 
     products.push({
+        index : Date.now(),
+        name: productName.value,
+        company: companyName.value,
+        category: categoryName.value,
+        tag: tagName.value,
+        location : location.value,
+        description: description.value,
+    });
+
+    reportProducts.push({
+        index : Date.now(),
         name: productName.value,
         company: companyName.value,
         category: categoryName.value,
@@ -25,6 +37,7 @@ export default function addProduct() {
     });
 
     Storage.set("products", products);
+    Storage.set("report-products", reportProducts);
 
     [productName, companyName, categoryName, tagName,location, description].forEach(
         input => (input.value = "")
